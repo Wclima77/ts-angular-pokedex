@@ -1,0 +1,14 @@
+*{
+    background-color: #D9DFE9;
+}
+.container-content{
+    border: 1px solid white;
+    width: 100%;
+
+}
+
+.content-box{
+    border: 1px solid rgb(241, 5, 5);
+    background-color: #FFFFFF;
+    
+}

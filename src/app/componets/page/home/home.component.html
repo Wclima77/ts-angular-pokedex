@@ -1,0 +1,13 @@
+
+<section class="content">
+    <app-menu-title></app-menu-title>
+
+    <app-card 
+    *ngFor="let pokemon of pokemons; index as i" 
+    [pokemon] = "pokemon"
+    [numero] = "i + 1">
+    </app-card>
+
+    <app-button-pagination></app-button-pagination>
+
+</section>
