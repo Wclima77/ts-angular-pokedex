@@ -3,8 +3,8 @@
     <app-menu-title></app-menu-title>
 
     <app-card 
-    *ngFor="let pokemon of pokemons; index as i" 
-    [pokemon] = "pokemon"
+    *ngFor="let pokemon of pokemonsService.pokemons; index as i" 
+    [pokemon] = "pokemon.name"
     [numero] = "i + 1">
     </app-card>
 

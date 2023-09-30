@@ -10,6 +10,7 @@ import { HomeComponent } from './componets/page/home/home.component';
 import { ContentComponent } from './componets/page/content/content/content.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonServicesService } from './services/pokemon.service';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,20 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonPaginationComponent,
     HomeComponent,
     ContentComponent,
-    HttpClientModule
   ],
 
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, 
+    AppRoutingModule, 
+    HttpClientModule
   ],
-  
-  providers: [],
-  bootstrap: [AppComponent]
+
+  providers: [
+    PokemonServicesService
+  ],
+
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

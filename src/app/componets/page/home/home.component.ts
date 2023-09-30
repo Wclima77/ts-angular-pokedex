@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { PokemonServicesService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-home',
@@ -6,21 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  
-  pokemons = [
-    "Bulbasaur",
-    "Ivysaur",
-    "Venusaur",
-    "Charmander"
-  ];
 
-  id!: number;
+  constructor(public pokemonsService: PokemonServicesService){
 
-  buscaTodosPokemons(){
-
-    const idrecebido = this.id;
-    
-    return `https://pokeapi.co/api/v2/pokemon/${idrecebido}.svg`;
   }
+
 
 }
