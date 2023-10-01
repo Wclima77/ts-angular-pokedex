@@ -5,7 +5,8 @@
     <app-card 
     *ngFor="let pokemon of pokemonsService.pokemons; index as i" 
     [pokemon] = "pokemon.name"
-    [numero] = "i + 1">
+    [numero] = "i + 1"
+    >
     </app-card>
 
     <app-button-pagination></app-button-pagination>

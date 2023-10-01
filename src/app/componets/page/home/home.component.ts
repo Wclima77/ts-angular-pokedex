@@ -6,6 +6,7 @@ import { PokemonServicesService } from 'src/app/services/pokemon.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
 
   constructor(public pokemonsService: PokemonServicesService){
