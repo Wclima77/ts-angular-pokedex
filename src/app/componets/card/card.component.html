@@ -3,13 +3,12 @@
     <ol id="pokemonList" class="pokemons">
         <!-- ..... Pokemons here ..... -->
         <li class="pokemon grass">
-            <span class="number grass">#001</span>
+            <span class="number grass">#{{adicionaZero()}}</span>
             <span class="name grass">{{pokemon}}</span>
     
-        <div class="detail grass grass">
+        <div class="detail grass">
             <ol class="types grass">
-                <li class="type grass">Grass</li>
-                <li class="type poison">Poison</li>
+                <li class="type grass">type</li>
             </ol>
     
             <img [src]="pegarImagemPokemon()"
