@@ -5,7 +5,5 @@ export type pokemonData = {
     sprites: {
         front_default: string
     }
-    types:{
-        type: string
-    }
+    types: string[] 
 }

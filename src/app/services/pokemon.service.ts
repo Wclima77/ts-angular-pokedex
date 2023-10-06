@@ -10,7 +10,7 @@ import { pokemonData } from '../models/pokemonData';
 })
 export class PokemonServicesService {
 
-  todosURL = 'https://pokeapi.co/api/v2/pokemon?limit=151'
+  todosURL = 'https://pokeapi.co/api/v2/pokemon?limit=15'
 
   pokemons: { name: string, url: string }[] = []; // Explicitly define the type
 

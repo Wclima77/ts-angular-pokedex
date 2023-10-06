@@ -2,16 +2,16 @@
 <div>
     <ol id="pokemonList" class="pokemons">
         <!-- ..... Pokemons here ..... -->
-        <li class="pokemon grass">
-            <span class="number grass">#{{adicionaZero()}}</span>
-            <span class="name grass">{{pokemon}}</span>
+        <li class="pokemon {{type}}">
+            <span class="number">#{{adicionaZero()}}</span>
+            <span class="name">{{pokemon}}</span>
     
-        <div class="detail grass">
-            <ol class="types grass">
-                <li class="type grass">type</li>
+        <div class="detail {{type}}">
+            <ol class="types {{type}}">
+                <li class="type {{type}}" *ngFor="let type of types">{{type}}</li>
             </ol>
     
-            <img [src]="pegarImagemPokemon()"
+            <img [src]="photo"
                 alt="">
         </div>
         </li>

@@ -11,6 +11,7 @@ import { PokemonServicesService } from 'src/app/services/pokemon.service';
 })
 export class CardComponent implements OnInit {
 
+  types: string[] = [];
 
   @Input()
   poke!: pokemonData;
@@ -22,18 +23,17 @@ export class CardComponent implements OnInit {
   pokemonUrl!: string;
 
   @Input()
-  numero!: number;
+  numero!: number
 
   @Input()
-  detail!: {
-    type: string,
-  }[];
+  photo!:string
 
-  pegarImagemPokemon(){
-    const numeroFormatodo = this.numero;
-    
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${numeroFormatodo}.svg`;
-  }
+  @Input()
+  name!:string
+
+  @Input()
+  type!:string
+
 
   adicionaZero(){
     const n = this.numero
@@ -49,9 +49,7 @@ export class CardComponent implements OnInit {
       sprites: {
         front_default:''
       },
-      types:{
-        type:''
-      }
+      types: []
     }
    }
   
@@ -66,15 +64,20 @@ export class CardComponent implements OnInit {
             name: res.name,
             sprites: res.sprites,
             types: res.types
-          }
-          console.log(res.id)
-          console.log(res.name)
-          console.log(res.sprites.front_default)
-          console.log(res.types)
+          };
+          this.numero = res.id
+          this.name = res.name
+          this.photo = res.sprites.front_default
+          this.types = this.extractTypes(res.types)
         },
       }
     )
 
+  }
+
+  private extractTypes(typesData: any[]): string[] {
+    // Extrair os tipos de cada objeto no array "typesData"
+    return typesData.map((typeObj) => this.type = typeObj.type.name);
   }
 
 }
